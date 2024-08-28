@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover</title>
+    <link rel="icon" href="./IMAGE/WhatsApp Image 2024-08-22 at 7.10.01 PM (1)-modified (1).png">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="wrapper ">
+        <div class="imgs-parent ">
+            <div class="img" style="background: url(./IMAGE/image1.png);"> </div>
+            <div class="img" style="background: url(./IMAGE/image2.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image3.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image4.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image5.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image6.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image7.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image8.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image9.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image10.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image11.png);"></div>
+            <div class="img" style="background: url(./IMAGE/image12.png);"></div>
+        </div>
+    </div>
+
+<script>
+    document.body.addEventListener("click",(event) => {
+        const clickedElement = event.target, imgs = document.querySelectorAll(".img");
+
+        if(!clickedElement.classList.contains("img")) {
+        imgs.forEach((img)=>img.classList.remove("open"));
+        return;
+    }
+    if(clickedElement.classList.contains("open")) {
+        clickedElement.classList.remove("open");
+        return;
+    }
+    imgs.forEach((img) => img.classList.remove("open"));
+    clickedElement.classList.add("open");
+    });
+   
+</script>
+
+</body>
+</html>
